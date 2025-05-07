@@ -113,6 +113,10 @@ sphinxext-opengraph = "^0.9.1"
 nbformat = "^5.10.4"
 commitizen = "^4.5.1"
 
+
+[tool.poetry.dependencies]
+defusedxml = "==0.7.1"
+
 [tool.black]
 line-length = 88
 
