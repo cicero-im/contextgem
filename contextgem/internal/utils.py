@@ -163,7 +163,7 @@ def _contains_jinja2_tags(text: str) -> bool:
     :return: True if the text contains Jinja2 tags, False otherwise
     :rtype: bool
     """
-    env = Environment()
+    env = Environment(autoescape=True)
     parsed = env.parse(text)
     # If any node in the top-level body is not TemplateData (and isn't an Output
     # wrapping only TemplateData), it indicates the presence of Jinja2 tags,
