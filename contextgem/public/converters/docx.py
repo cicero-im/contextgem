@@ -37,6 +37,7 @@ from contextgem.internal.typings.aliases import RawTextMode
 from contextgem.public.documents import Document
 from contextgem.public.images import Image
 from contextgem.public.paragraphs import Paragraph
+import defusedxml.ElementTree
 
 
 # Define custom exceptions
@@ -160,7 +161,7 @@ class DocxPackage:
 
         try:
             data = self.archive.read(part_path)
-            return ET.fromstring(data)
+            return defusedxml.ElementTree.fromstring(data)
         except ET.ParseError as e:
             raise DocxXmlError(f"Failed to parse XML in '{part_path}': {str(e)}") from e
         except Exception as e:
