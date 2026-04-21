@@ -99,7 +99,7 @@ black = "^25.1.0"
 coverage = "^7.6.12"
 pytest = "^8.3.4"
 pytest-cov = "^6.0.0"
-python-dotenv = "^1.0.1"
+python-dotenv = "^1.2.2"
 pip-tools = "^7.4.1"
 pytest-vcr = {git = "https://github.com/shcherbak-ai/pytest-vcr.git", rev = "master"}
 pre-commit = "^4.1.0"
